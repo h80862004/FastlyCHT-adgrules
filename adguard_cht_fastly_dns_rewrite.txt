@@ -1,0 +1,15 @@
+! Fastly / CHT AdGuard DNS Rewrite Rules
+! Author: Alston Yuan
+! Last Updated: 2026-10-06
+! Purpose: Workaround for slow CDN routing affecting selected X/Twitter and Twitch endpoints on Chunghwa Telecom (CHT).
+! Note: CDN IP mappings may change over time. Remove or update these rules if connectivity degrades.
+
+! X / Twitter
+||pbs.twimg.com^$dnsrewrite=NOERROR;A;104.18.37.228
+||video.twimg.com^$dnsrewrite=NOERROR;A;104.18.36.146
+||abs.twimg.com^$dnsrewrite=NOERROR;A;104.18.39.59
+
+! Twitch
+||static-cdn.jtvnw.net^$dnsrewrite=NOERROR;A;146.75.50.214
+||gql.twitch.tv^$dnsrewrite=NOERROR;A;146.75.50.214
+||www.twitch.tv^$dnsrewrite=NOERROR;A;146.75.50.214
